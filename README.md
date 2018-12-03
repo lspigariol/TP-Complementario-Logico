@@ -1,12 +1,13 @@
-# TP-Complementario-Logico
-Guasapp
+# Guasapp
 
-CONSIGNA:
+# Ejercicio integrador Logico
 
-GUASAPP
-La aplicación de mensajería móvil mundialmente conocida Guasapp tiene una rara pero compleja selección y categorización sobre los grupos de chats que existen.
+### CONSIGNA:
+
+**La aplicación de mensajería móvil mundialmente conocida Guasapp tiene una rara pero compleja selección y categorización sobre los grupos de chats que existen.**
 
 De los usuarios de Guasapp se sabe su nombre, la calidad de su foto de perfil (del 1 al 10) y la cantidad de contactos que este tiene en su agenda. Se conoce a los siguientes contactos:
+
 usuario(alex,2,150).
 usuario (ivan,7,30).
 usuario (lucas,8,120).
