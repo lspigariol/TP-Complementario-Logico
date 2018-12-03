@@ -68,10 +68,8 @@ longDescripcionMinima(NombreGrupo,MinRequerido):-
 
 %%%%%%%%%%%%%%EJERCICIO D%%%%%%%%%%%%%%%%
 nivelTotal(NombreGrupo,SumaTot):-
-	findall(Nivel,(participaEnGrupo(Persona,NombreGrupo),nivelFarandula(Persona,Nivel)),ListaNiveles),
-	sumlist(ListaNiveles,Suma),
-	nivelAdm(NombreGrupo,NivAdm),
-	SumaTot is (Suma + NivAdm).
+	findall(Nivel,((participaEnGrupo(Persona,NombreGrupo),not(administrador(Persona,NombreGrupo))),nivelFarandula(Persona,Nivel)),ListaNiveles),
+	sumlist(ListaNiveles,SumaTot).
 
 nivelAdm(NombreGrupo,NivAdm):-
 	administrador(Adm,NombreGrupo),
@@ -80,16 +78,16 @@ nivelAdm(NombreGrupo,NivAdm):-
 %%%%%%%%%%%%%%EJERCICIO E%%%%%%%%%%%%%%%%
 mensajeValeLaPena(Mensaje):-
 	envio(Mensaje,Emisor,NombreGrupo),
-	condicionTipoMensaje(Mensaje,NombreGrupo),
+	tipoMensajeValeLaPena(Mensaje,NombreGrupo),
 	esCrack(Emisor).
 	
-condicionTipoMensaje(notaDeVoz(Duracion),_):-
+tipoMensajeValeLaPena(notaDeVoz(Duracion),_):-
 	Duracion < 30.
 
-condicionTipoMensaje(texto(CantCaract,picante),_):-
+tipoMensajeValeLaPena(texto(CantCaract,picante),_):-
 	CantCaract < 100.
 
-condicionTipoMensaje(foto(ParticipantesFoto),NombreGrupo):-
+tipoMensajeValeLaPena(foto(ParticipantesFoto),NombreGrupo):-
 	forall(member(UnParticipante,ParticipantesFoto),participaEnGrupo(UnParticipante,NombreGrupo)).
 
 %%%%%%%%%%%%%%EJERCICIO F%%%%%%%%%%%%%%%%
