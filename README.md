@@ -37,13 +37,18 @@ envio (foto([stephen,michael]) ,manu,basquet).
  
 Se pide:
 a)   Definir un predicado que determine si el grupo es divertido. Esto ocurre cuando el grupo tiene un nivel de seriedad menor a 3, o bien si es un grupo de salidas.
+
 b)  	Saber si una persona es crack. Esto pasa si está en algún grupo divertido y su nivel de farándula es mayor o igual a 200. El nivel de farándula se calcula como cantContactos + calidadFoto*10.
+
 c)   Conocer qué grupos son chetos. Los grupos chetos son los que están formado únicamente por cracks y su descripción tiene mas de 20 caracteres. Obviamente para ser cheto, el grupo también tiene que ser divertido.
+
 d)  	Determinar el nivel total de un grupo. Este se calcula como la suma de todos los niveles de farándula de sus integrantes. Ojo, el nivel del administrador no cuenta!
+
 e)  	Conocer si un mensaje vale la pena. Esto ocurre cuando:
   Si es un texto tiene menos de 100 caracteres y es picante.
   Si es una nota de voz dura menos de 30 segundos.
   Si es una foto, todos los que aparezcan en la foto deben ser del grupo.
 Aparte de todo esto, para que el mensaje valga la pena el que lo envía debe ser crack también.
+
 f)  Saber si una persona es conocido de otra persona. Esto ocurre si la primera    comparte algún grupo con la segunda. O si la primera comparte grupo con una tercera persona que a la vez comparte grupo con la segunda. Y así sucesivamente.
 
